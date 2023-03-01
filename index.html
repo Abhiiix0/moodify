@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodify.com</title>
+    <script src="https://kit.fontawesome.com/d7431438a4.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-decoration: none;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        color: white;
+        background-color: rgb(23, 23, 66);
+    }
+
+    nav img {
+        /* width: 90px; */
+        padding-bottom: 10px;
+    }
+
+    nav .link a {
+        color: white;
+        font-size: 20px;
+
+    }
+
+    nav .link a:nth-child(2) {
+        margin: 0 10px;
+    }
+
+    nav .link a:nth-child(3) {
+        margin-right: 10px;
+    }
+
+    .active {
+        border-bottom: 2px solid white;
+    }
+
+    nav .link a:hover {
+        border-bottom: 2px solid white;
+    }
+
+    .banner {
+        margin-top: 10px;
+    }
+
+    .banner img {
+        width: 100%;
+    }
+
+    .ui a {
+        font-size: 20px;
+    }
+
+    .ui {
+        padding-top: 20px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .ui h3 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .ui .imgs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    .ui img {
+        width: 300px;
+        height: 600px;
+        margin: 25px;
+    }
+
+    .info {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .info p {
+        font-size: 22px;
+    }
+
+    .info h4 {
+        font-size: 29px;
+    }
+
+    footer {
+        background-color: rgb(23, 23, 66);
+        text-align: center;
+        color: white;
+        padding: 10px 0;
+    }
+
+    footer .social-media-link a i {
+        color: white;
+        margin: 8px;
+        font-size: 25px;
+    }
+
+    footer .social-media-link a i:hover {
+        color: rgb(202, 7, 202);
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <nav>
+        <img src="logo.jpeg" alt="" height="60px">
+        <div class="link">
+            <a href="index.html" class="active">Home</a>
+            <a href="music.html">Music</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <section class="banner">
+            <img class="mySlides" src="banner1.jpg">
+            <img class="mySlides" src="banner2.jpg">
+            <img class="mySlides" src="banner3.jpg">
+            <script>
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 2000);
+                }
+            </script>
+        </section>
+        <div class="info">
+            <h4> Why Moodify?</h4><br>
+            <p>
+                Play your favorites. <br>
+                Listen to the songs you love, and discover new music and podcasts. <br>
+                Playlists made easy. <br>
+                We'll help you make playlists. Or enjoy playlists made by music experts </p><br><br>
+
+
+            <h4> Make it yours</h4><br>
+            <p>
+                Tell us what you like, and we'll recommend music for you. <br>
+                Save mobile data. <br>
+                To use less data when you pla</p>
+        </div>
+        <section class="ui">
+            <h3>MOODIFY UI</h3>
+            <div class="imgs">
+                <img src="ui1.jpeg" alt="">
+                <img src="ui3.jpeg" alt="">
+                <img src="ui2.jpeg" alt="">
+                <img src="ui4.jpeg" alt="">
+            </div>
+            <a href="#">Click here to download our application</a>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media-link">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>Made with ❤️</p>
+    </footer>
+</body>
+
+</html>
